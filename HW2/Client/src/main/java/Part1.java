@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 
 public class Part1 {
     //    private static final long TIMESLEEP = 1;
-    final static private int NUMTHREADS = 500; // 500
+    final static private int NUMTHREADS = 100; // 500
     private static final java.net.http.HttpClient httpClient = java.net.http.HttpClient.newBuilder()
             .version(java.net.http.HttpClient.Version.HTTP_1_1)
             .connectTimeout(Duration.ofSeconds(100000))
@@ -61,7 +61,7 @@ public class Part1 {
         for(int i = 0; i < NUMTHREADS; i++){
             ArrayList<String[]> data = new ArrayList<>(); // Arrays.asList(new String[250000][])
             Runnable thread = () -> {
-                for (int j = 0; j < 1000; j++) { // 1000
+                for (int j = 0; j < 5000; j++) { // 1000
                     int d = ThreadLocalRandom.current().nextInt(0,2);
                     int swiper = ThreadLocalRandom.current().nextInt(0,5000) + 1;
                     int swipee = ThreadLocalRandom.current().nextInt(0,1000000) + 1;
@@ -76,8 +76,8 @@ public class Part1 {
                                             "}"))
 //                            .uri(URI.create("http://localhost:8080/HW2_war_exploded/servlet/"))
 //                            .uri(URI.create("http://34.201.21.28:8080/HW2_war/servlet"))
-//                            .uri(URI.create("http://18.205.3.46:8080/HW2_war/servlet"))
-                            .uri(URI.create("http://hw2-1566521256.us-east-1.elb.amazonaws.com:8080/HW2_war/servlet"))
+//                            .uri(URI.create("http://18.206.86.24:8080/Server_war/servlet"))
+                            .uri(URI.create("http://HW2-1566521256.us-east-1.elb.amazonaws.com:8080/Server_war/servlet"))
                             .build();
 
                     HttpResponse<String> response = null;
