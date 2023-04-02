@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="RedisServletE">
+    <output-path>$PROJECT_DIR$/out/artifacts/RedisServletE</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="RedisServlet/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="RedisServlet" />
+          <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar" path-in-jar="/" />
+          <element id="extracted-dir" path="$MAVEN_REPOSITORY$/redis/clients/jedis/4.1.0/jedis-4.1.0.jar" path-in-jar="/" />
+        </element>
+        <element id="directory" name="lib" />
+      </element>
+    </root>
+  </artifact>
+</component>

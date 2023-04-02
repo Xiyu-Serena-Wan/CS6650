@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="RedisServletA">
+    <output-path>$PROJECT_DIR$/out/artifacts/RedisServletA</output-path>
+    <root id="archive" name="RedisServletA.war">
+      <element id="artifact" artifact-name="RedisServletE" />
+    </root>
+  </artifact>
+</component>
